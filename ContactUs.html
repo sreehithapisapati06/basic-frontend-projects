@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Sreehitha Pisapati">
+        <meta name="description" content="contact info of TS">
+        <link rel="icon" href="taco.png" type="image/x-icon" >
+        <link rel="stylesheet" href="style.css">
+        <title>
+            Contact Information
+        </title>
+    </head>
+    <body>
+        <header>
+            <h1>The Taco Shop - Contact Information</h1>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html" target="_blank">Home</a>
+                    </li>
+                    <li>
+                        <a href="About" target="_blank">About <abbr title="taco shop">TS</abbr></a>
+                    </li>
+                    <li>
+                        <a href="StoreHours" target="_blank">Store Hours</a>
+                    </li>
+                    <li>
+                        <a href="OurMenu.html" target="_blank">Our Menu</a>
+                    </li>
+                </ul>
+            </nav>
+            <figure>
+                <img src="tacos close up.webp" alt="taco close up" width="300" height="250">
+            </figure>
+        </header>
+        <hr>
+        <main>
+            <section>
+            <h2>Our Contact Form!</h2>
+            <form action="https://httpbin.org/get" method="get">
+                <fieldset>
+                    <legend>
+                        Send Us A Message!
+                    </legend>
+                    <p>
+                        <label for="name">Name: </label>
+                        <input type="text" name="name" id="name" placeholder="your name" required>
+                    </p>
+                    <p>
+                        <label for="email">E-Mail: </label>
+                        <input type="email" name="email" id="email" placeholder="your email" required>
+                    </p>
+                    <p>
+                        <label for="message">Your Message: </label>
+                        <br>
+                        <textarea name="message" id="message" placeholder="type your message here" required></textarea>
+                    </p>
+                </fieldset>
+                <button type="submit">submit</button>
+                <button type="reset">reset</button>
+            </form>
+        </section>
+        <section>
+            <h2>
+                Our Location
+            </h2>
+            <address>
+                555 Taco Temptation Lane, Suite T<br>
+                Kansas City, MO 55555-55555
+                <br><br>
+                Phone: <a href="tel: +5555555555">555-55-555-55</a>
+            </address>
+        </section>
+        </main>
+        <hr>
+        <footer>
+            <p>Copyright &copy; The Taco Shop</p>
+        </footer>
+    </body>
+</html>
