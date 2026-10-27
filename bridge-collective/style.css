@@ -1,0 +1,220 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #2950f5;
+    color: #ffffff;
+    min-height: 100vh;
+}
+.navbar {
+    height: 73px;
+    padding: 0 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+}
+.menu-button {
+    width: 22px;
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.menu-button span {
+    display: block;
+    height: 2px;
+    width: 19px;
+    background-color: white;
+}
+
+/* 4. Main two-column layout */
+.main-layout {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    min-height: calc(100vh - 145px);
+}
+
+/* 5. Left hero section */
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 48px;
+}
+
+.hero-content {
+    max-width: 500px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 4.2vw, 60px);
+    font-weight: 500;
+    line-height: 1.07;
+    letter-spacing: -1.8px;
+    margin-bottom: 40px;
+}
+
+.hero p {
+    max-width: 400px;
+    font-size: 17px;
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.82);
+}
+
+/* 6. Right statistics grid */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Each statistics box */
+.stat-card {
+    min-width: 0;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Top row: icon and number */
+.stat-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.symbol {
+    font-size: 34px;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.number {
+    font-size: clamp(26px, 2.5vw, 38px);
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+/* Text at bottom of each box */
+.stat-description h2 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.stat-description p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* 7. Footer */
+.footer {
+    min-height: 72px;
+    padding: 20px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 14px;
+}
+
+/* 8. Tablet layout */
+@media (max-width: 900px) {
+    .navbar {
+        padding: 0 28px;
+    }
+
+    .main-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 400px;
+        padding: 48px 28px;
+    }
+
+    .stats {
+        min-height: 500px;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .stat-card {
+        padding: 24px;
+    }
+
+    .footer {
+        padding: 20px 28px;
+    }
+}
+
+/* 9. Mobile layout */
+@media (max-width: 520px) {
+    .navbar {
+        height: 60px;
+        padding: 0 18px;
+    }
+
+    .hero {
+        min-height: 350px;
+        padding: 40px 18px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+        letter-spacing: -1.5px;
+        margin-bottom: 26px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        min-height: auto;
+    }
+
+    .stat-card {
+        min-height: 210px;
+        padding: 24px 18px;
+    }
+
+    .number {
+        font-size: 32px;
+    }
+
+    .footer {
+        padding: 20px 18px;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 12px;
+    }
+}
